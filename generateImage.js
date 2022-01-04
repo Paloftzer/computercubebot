@@ -18,7 +18,7 @@ const av = {
 
 const generateImage = async (member) => {
   let username = member.user.username
-  let descrim = member.user.descriminator
+  let discrim = member.user.discriminator
   let avatarURL = member.user.displayAvatarURL({format: "png", dynamic: false, size: av.size})
 
   const canvas = Canvas.createCanvas(dim.width, dim.height)
@@ -53,7 +53,7 @@ const generateImage = async (member) => {
 
   // Draw in the username
   ctx.font = "60px Roboto"
-  ctx.fillText(username + descrim, dim.width / 2, dim.height - dim.margin - 125)
+  ctx.fillText(username + discrim, dim.width / 2, dim.height - dim.margin - 125)
 
   // Draw in to the server
   ctx.font = "40px Roboto"
